@@ -77,7 +77,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
             <div className="lg:col-span-8 space-y-6 text-left reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] text-text-primary tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display leading-[1.1] text-text-primary tracking-tight">
                 <span className="block">The Smarter Way to <span className="text-accent-primary">Acquire</span>,</span>
                 <span className="block mt-1 sm:mt-2">The Confidential Way to <span className="text-accent-primary italic">Exit</span>.</span>
               </h1>
@@ -97,18 +97,6 @@ export default function Home() {
                 >
                   Value Your Business
                 </button>
-              </div>
-
-              {/* Quick Stats */}
-              <div className="pt-10 border-t border-border-color/25 max-w-lg">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-display text-text-primary">
-                    145K+
-                  </div>
-                  <div className="text-[10px] sm:text-xs font-semibold text-text-tertiary uppercase tracking-wider mt-1">
-                    Active Buyers
-                  </div>
-                </div>
               </div>
             </div>
 
