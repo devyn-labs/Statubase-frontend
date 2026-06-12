@@ -72,7 +72,7 @@ export const InteractiveChart: React.FC = () => {
           <span className="text-xs uppercase tracking-wider text-text-tertiary">ARR</span>
           <div className="flex items-baseline gap-2 mt-1">
             <span className="text-xl font-bold font-display">$1.25M</span>
-            <span className="text-xs text-green-500 font-semibold">+32%</span>
+            <span className="text-xs text-[#081B2B] font-semibold">+32%</span>
           </div>
         </button>
 

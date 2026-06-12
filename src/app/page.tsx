@@ -76,13 +76,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-6 text-left reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent-primary/10 border border-accent-primary/25 text-accent-primary text-xs font-semibold uppercase tracking-wider">
-                Institutional M&A Platform
-              </span>
+            <div className="lg:col-span-8 space-y-6 text-left reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] text-text-primary tracking-tight">
-                The Smarter Way to <span className="text-accent-primary">Acquire</span>,<br />
-                The Confidential Way to <span className="text-accent-primary italic">Exit</span>.
+                <span className="block">The Smarter Way to <span className="text-accent-primary">Acquire</span>,</span>
+                <span className="block mt-1 sm:mt-2">The Confidential Way to <span className="text-accent-primary italic">Exit</span>.</span>
               </h1>
               <p className="text-base sm:text-lg text-text-secondary font-light max-w-2xl leading-relaxed">
                 Statubase connects verified business owners seeking clean exits with qualified institutional and private buyers. Every listing is vetted. Every buyer is screened. Zero friction from first look to final transfer.
@@ -103,23 +100,7 @@ export default function Home() {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-10 border-t border-border-color/25 max-w-lg">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-display text-text-primary">
-                    $380M+
-                  </div>
-                  <div className="text-[10px] sm:text-xs font-semibold text-text-tertiary uppercase tracking-wider mt-1">
-                    Volume Closed
-                  </div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold font-display text-text-primary">
-                    4.6x
-                  </div>
-                  <div className="text-[10px] sm:text-xs font-semibold text-text-tertiary uppercase tracking-wider mt-1">
-                    Avg SaaS Multiple
-                  </div>
-                </div>
+              <div className="pt-10 border-t border-border-color/25 max-w-lg">
                 <div>
                   <div className="text-2xl sm:text-3xl font-extrabold font-display text-text-primary">
                     145K+
@@ -132,7 +113,7 @@ export default function Home() {
             </div>
 
             {/* Right Visual (Interactive Dashboard mockup) */}
-            <div className="lg:col-span-5 w-full reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+            <div className="lg:col-span-4 w-full reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
               <div className="flex flex-col gap-4">
                 {/* Embedded Interactive Chart Component */}
                 <InteractiveChart />
@@ -158,7 +139,7 @@ export default function Home() {
                         <div className="text-sm font-bold text-text-primary">GreenCommerce</div>
                         <div className="text-[10px] text-text-tertiary font-semibold uppercase mt-0.5">Shopify Store</div>
                       </div>
-                      <span className="px-2.5 py-1 rounded-full bg-green-500/10 text-green-500 font-semibold text-[10px] tracking-wide uppercase">
+                      <span className="px-2.5 py-1 rounded-full bg-[#081B2B]/10 text-[#081B2B] font-semibold text-[10px] tracking-wide uppercase">
                         LOI Accepted
                       </span>
                     </div>
