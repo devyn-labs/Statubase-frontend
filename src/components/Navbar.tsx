@@ -4,12 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 interface NavbarProps {
-  theme: "light" | "dark";
-  onToggleTheme: () => void;
   onOpenSellerModal: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ theme, onToggleTheme, onOpenSellerModal }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenSellerModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [

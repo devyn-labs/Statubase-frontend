@@ -13,7 +13,6 @@ import { AccessModals } from "@/components/AccessModals";
 import { Listing } from "@/data/listings";
 
 export default function Home() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"seller" | "buyer" | null>(null);
   const [activeListing, setActiveListing] = useState<Listing | undefined>(undefined);
@@ -22,16 +21,10 @@ export default function Home() {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     const initialTheme = savedTheme || "light";
-    setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
 
-  const handleToggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme);
-    localStorage.setItem("theme", nextTheme);
-  };
+
 
   // Scroll animations observer
   useEffect(() => {
@@ -70,8 +63,6 @@ export default function Home() {
     <div className="relative min-h-screen bg-bg-primary text-text-primary overflow-x-hidden pt-20">
       {/* Navbar */}
       <Navbar
-        theme={theme}
-        onToggleTheme={handleToggleTheme}
         onOpenSellerModal={handleOpenSellerModal}
       />
 
@@ -90,11 +81,11 @@ export default function Home() {
                 Institutional M&A Platform
               </span>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] text-text-primary tracking-tight">
-                Acquire High-Growth <br className="hidden sm:inline" />
-                Businesses Confidentially.
+                The Smarter Way to <span className="text-accent-primary">Acquire</span>,<br />
+                The Confidential Way to <span className="text-accent-primary italic">Exit</span>.
               </h1>
               <p className="text-base sm:text-lg text-text-secondary font-light max-w-2xl leading-relaxed">
-                Statubase connects vetted business owners seeking clean exits with qualified institutional and private buyers. Zero friction. Fully encrypted data rooms. Escrow integrated.
+                Statubase connects verified business owners seeking clean exits with qualified institutional and private buyers. Every listing is vetted. Every buyer is screened. Zero friction from first look to final transfer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a
