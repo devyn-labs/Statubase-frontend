@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenSellerModal }) => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs font-bold uppercase tracking-wider text-text-secondary hover:text-accent-primary transition-colors"
+                className="text-sm font-medium text-text-secondary hover:text-accent-primary transition-colors"
               >
                 {link.label}
               </a>

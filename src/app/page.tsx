@@ -67,33 +67,33 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <header id="home" className="relative min-h-[90vh] flex items-center overflow-hidden border-b border-border-color/20">
+      <header id="home" className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden border-b border-border-color/20">
         {/* Interactive canvas background */}
         <HeroCanvas />
         {/* Glow overlay */}
         <div className="hero-mesh-overlay" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full py-16 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-12 w-full py-16 lg:py-24 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-8 space-y-6 text-left reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-extrabold font-display leading-[1.1] text-text-primary tracking-tight">
-                <span className="block">The Smarter Way to <span className="text-accent-primary">Acquire</span>,</span>
-                <span className="block mt-1 sm:mt-2">The Confidential Way to <span className="text-accent-primary italic">Exit</span>.</span>
+            <div className="lg:col-span-7 xl:col-span-7 space-y-8 lg:space-y-10 text-left reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-extrabold font-display leading-[1.15] text-text-primary tracking-tight">
+                <span className="block whitespace-nowrap">The Smarter Way to <span className="text-accent-primary">Acquire</span>,</span>
+                <span className="block whitespace-nowrap mt-2 sm:mt-4">The Confidential Way to <span className="text-accent-primary italic">Exit</span>.</span>
               </h1>
-              <p className="text-base sm:text-lg text-text-secondary font-light max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-text-secondary font-light max-w-2xl leading-relaxed font-display">
                 Statubase connects verified business owners seeking clean exits with qualified institutional and private buyers. Every listing is vetted. Every buyer is screened. Zero friction from first look to final transfer.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2 lg:pt-4">
                 <a
                   href="#marketplace"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent-primary text-bg-primary hover:bg-accent-primary-hover font-bold text-sm tracking-wide transition-all shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/30"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent-primary text-bg-primary hover:bg-accent-primary-hover font-bold text-sm lg:text-base tracking-wide transition-all shadow-lg shadow-accent-primary/20 hover:shadow-accent-primary/30 font-display"
                 >
                   Explore Active Listings <span className="ml-1.5" aria-hidden="true">→</span>
                 </a>
                 <button
                   onClick={handleOpenSellerModal}
-                  className="px-6 py-3.5 rounded-xl bg-bg-secondary border border-border-color hover:border-accent-primary hover:text-accent-primary font-bold text-sm tracking-wide transition-all"
+                  className="px-6 py-3.5 rounded-xl bg-bg-secondary border border-border-color hover:border-accent-primary hover:text-accent-primary font-bold text-sm lg:text-base tracking-wide transition-all font-display"
                 >
                   Value Your Business
                 </button>
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
 
             {/* Right Visual (Interactive Dashboard mockup) */}
-            <div className="lg:col-span-4 w-full reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
+            <div className="lg:col-span-5 xl:col-span-5 w-full max-w-lg mx-auto lg:mx-0 lg:ml-auto reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out delay-100">
               <div className="flex flex-col gap-4">
                 {/* Embedded Interactive Chart Component */}
                 <InteractiveChart />
