@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { HeroCanvas } from "@/components/HeroCanvas";
 import { InteractiveChart } from "@/components/InteractiveChart";
 import { Marketplace } from "@/components/Marketplace";
+import { HowItWorks } from "@/components/HowItWorks";
 import { ValuationCalculator } from "@/components/ValuationCalculator";
 import { ProcessFlow } from "@/components/ProcessFlow";
 import { FaqSection } from "@/components/FaqSection";
@@ -56,8 +57,6 @@ export default function Home() {
     setActiveListing(listing);
     setModalOpen(true);
   };
-
-  const pressLogos = ["TechCrunch", "Forbes", "Bloomberg", "VentureBeat", "Silicon Valley Business"];
 
   return (
     <div className="relative min-h-screen bg-bg-primary text-text-primary overflow-x-hidden pt-20">
@@ -139,119 +138,11 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Press logos marquee */}
-      <section className="py-8 bg-bg-secondary border-b border-border-color/20 overflow-hidden" aria-label="Featured in">
-        <div className="relative w-full flex items-center">
-          <div className="flex w-max gap-16 animate-marquee whitespace-nowrap">
-            {/* Duplicated list of logos for infinite loop */}
-            {[...pressLogos, ...pressLogos].map((logo, idx) => (
-              <span
-                key={idx}
-                className="text-sm sm:text-base font-extrabold font-display tracking-widest text-text-tertiary/45 uppercase"
-              >
-                {logo}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* How Statubase Works Sections */}
+      <HowItWorks />
 
       {/* Marketplace Listings Section */}
       <Marketplace onOpenBuyerModal={handleOpenBuyerModal} />
-
-      {/* Exit Readiness Section */}
-      <section id="features" className="py-24 bg-bg-secondary/40 border-t border-border-color/50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center reveal-element opacity-0 translate-y-8 transition-all duration-700 ease-out">
-            {/* Left Info */}
-            <div className="lg:col-span-7 space-y-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent-primary/10 text-accent-primary text-xs font-semibold uppercase tracking-wider">
-                For Sellers
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-bold font-display tracking-tight text-text-primary">
-                Exit Confidentially. <br /> Get Maximized Valuation.
-              </h2>
-              <p className="text-base sm:text-lg text-text-secondary font-light max-w-2xl leading-relaxed">
-                We shield your identity, financials, and codebase. Only qualified, vetted buyers with verified liquidity can view details.
-              </p>
-              <ul className="space-y-4 pt-4">
-                {[
-                  "100% secure data rooms decrypt financials only to serious buyers.",
-                  "Advisory support from expert business brokers at no upfront fee.",
-                  "Optimized valuations tuned to industry-specific multiples."
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-text-secondary">
-                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 text-xs font-bold mt-0.5">
-                      ✓
-                    </span>
-                    <span className="leading-relaxed font-light">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={handleOpenSellerModal}
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-accent-primary text-bg-primary hover:bg-accent-primary-hover font-bold text-sm tracking-wide transition-all shadow-md shadow-accent-primary/15"
-              >
-                Start Exit Process
-              </button>
-            </div>
-
-            {/* Right Interactive Dashboard */}
-            <div className="lg:col-span-5 bg-card-bg border border-card-border p-8 rounded-3xl shadow-xl">
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-xs font-bold text-text-tertiary uppercase tracking-wider">
-                  Live Seller Dashboard
-                </span>
-                <span className="px-2 py-0.5 rounded bg-accent-primary/20 text-accent-primary text-[10px] font-bold uppercase">
-                  Verified Stripe
-                </span>
-              </div>
-
-              <div className="text-center mb-8">
-                <div className="text-xs font-semibold text-text-tertiary uppercase tracking-wider mb-1">
-                  Exit Readiness Score
-                </div>
-                <div className="text-5xl font-black font-display text-text-primary tracking-tight">
-                  92%
-                </div>
-              </div>
-
-              {/* Progress bars */}
-              <div className="space-y-5">
-                <div>
-                  <div className="flex justify-between items-center text-xs font-semibold text-text-secondary mb-1.5">
-                    <span>Financial Vetting Accuracy</span>
-                    <span className="font-mono">98%</span>
-                  </div>
-                  <div className="w-full h-2 bg-bg-tertiary rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-primary rounded-full" style={{ width: "98%" }} />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between items-center text-xs font-semibold text-text-secondary mb-1.5">
-                    <span>Escrow Integration Hook</span>
-                    <span className="font-mono">Active (100%)</span>
-                  </div>
-                  <div className="w-full h-2 bg-bg-tertiary rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-primary rounded-full" style={{ width: "100%" }} />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between items-center text-xs font-semibold text-text-secondary mb-1.5">
-                    <span>Buyer Interest Index</span>
-                    <span className="font-mono">High (82%)</span>
-                  </div>
-                  <div className="w-full h-2 bg-bg-tertiary rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-primary rounded-full" style={{ width: "82%" }} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Valuation Estimator Component */}
       <ValuationCalculator onOpenSellerModal={handleOpenSellerModal} />
@@ -275,9 +166,14 @@ export default function Home() {
             />
           </a>
 
-          <div className="text-xs text-text-tertiary">
-            &copy; {new Date().getFullYear()} Statubase Inc. All rights reserved.
+          <div className="flex items-center gap-6 text-xs font-semibold text-text-secondary">
+            <a href="#" className="hover:text-accent-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-accent-primary transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-accent-primary transition-colors">Contact</a>
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 mt-6 text-xs text-text-tertiary text-center sm:text-left">
+          &copy; {new Date().getFullYear()} Statubase Inc. All rights reserved.
         </div>
       </footer>
 

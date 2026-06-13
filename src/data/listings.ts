@@ -9,6 +9,13 @@ export interface Listing {
   margin: number;
   askingPrice: number;
   growth: number;
+  founder: string;
+  foundedYear: number;
+  location: string;
+  licenses: number;
+  likes: number;
+  tags: string[];
+  initial: string;
 }
 
 export const listings: Listing[] = [
@@ -23,6 +30,13 @@ export const listings: Listing[] = [
     margin: 85,
     askingPrice: 1620000,
     growth: 42,
+    founder: "John Carter",
+    foundedYear: 2018,
+    location: "Austin, Texas, USA",
+    licenses: 4,
+    likes: 127,
+    tags: ["Patent Holder", "Escrow Ready", "Stripe Verified", "Open to Offers"],
+    initial: "A",
   },
   {
     id: 2,
@@ -35,6 +49,13 @@ export const listings: Listing[] = [
     margin: 22,
     askingPrice: 580000,
     growth: 18,
+    founder: "Sarah Jenkins",
+    foundedYear: 2020,
+    location: "Portland, Oregon, USA",
+    licenses: 2,
+    likes: 314,
+    tags: ["Trademarked", "Supplier Contracts", "Shopify Plus"],
+    initial: "D",
   },
   {
     id: 3,
@@ -47,6 +68,13 @@ export const listings: Listing[] = [
     margin: 90,
     askingPrice: 540000,
     growth: 130,
+    founder: "Michael Chen",
+    foundedYear: 2022,
+    location: "Remote / Global",
+    licenses: 1,
+    likes: 89,
+    tags: ["High Margin", "Escrow Ready", "No Debt"],
+    initial: "S",
   },
   {
     id: 4,
@@ -59,6 +87,13 @@ export const listings: Listing[] = [
     margin: 75,
     askingPrice: 1150000,
     growth: 28,
+    founder: "Elena Rodriguez",
+    foundedYear: 2019,
+    location: "Barcelona, Spain",
+    licenses: 5,
+    likes: 205,
+    tags: ["App Store Featured", "IP Included", "Recurring Rev"],
+    initial: "M",
   },
   {
     id: 5,
@@ -71,6 +106,13 @@ export const listings: Listing[] = [
     margin: 28,
     askingPrice: 910000,
     growth: 15,
+    founder: "David Smith",
+    foundedYear: 2015,
+    location: "London, UK",
+    licenses: 12,
+    likes: 56,
+    tags: ["B2B Enterprise", "Long-term Contracts", "High LTV"],
+    initial: "D",
   },
   {
     id: 6,
@@ -83,6 +125,13 @@ export const listings: Listing[] = [
     margin: 80,
     askingPrice: 415000,
     growth: 24,
+    founder: "Alex Wright",
+    foundedYear: 2021,
+    location: "New York City, NY",
+    licenses: 0,
+    likes: 421,
+    tags: ["Media Asset", "Sponsorships", "High Engagement"],
+    initial: "F",
   },
 ];
 
